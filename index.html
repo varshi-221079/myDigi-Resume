@@ -1,0 +1,303 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital resume</title>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!--
+RESPONSIVE DESIGN
+    Breakpoints determine how the layout behaves at different screen sizes:
+    sm → small screens (≥576px)
+    md → medium screens (≥768px)
+    lg → large screens (≥992px)
+    xl → extra-large (≥1200px)
+    xxl → extra-extra-large (≥1400px)
+Use responsive utilities: d-none, d-md-block
+    d-none → element is hidden on all screen sizes
+    d-md-block → element becomes visible (block) on medium screens and above
+Use responsive spacing: p-*, m-*
+    p-* → padding (inside space)
+     m-* → margin (outside space)
+      my-5 → margin vertical (top & bottom) of 5 units
+    py-5 → padding vertical (top & bottom) of 5 units
+   p-3 → padding all sides of 3 units
+Use img-fluid for images
+      img-fluid → makes images scale automatically with the parent container Prevents images from overflowing on small screens
+GRID SYSTEM
+container and container-fluid
+    container → fixed-width container, responsive at different breakpoints, adds horizontal padding automatically.
+    container-fluid → full-width container, stretches 100% across the screen.
+row, col
+   .row → groups columns horizontally, handles negative margins so columns align.
+   .col-* → defines the width of each column inside a row.
+Different column sizes:
+     col-12 → full width on extra small screens (default).
+     col-md-6 → half width on medium screens.
+     col-lg-4 → one-third width on large screens
+col-12, col-md-6, col-lg-4
+Nested grids:
+Offsets (offset-*):
+     Offset just pushes your column to the right
+     col-md-6 → your content takes 6 columns (half width)
+     offset-md-3 → leaves 3 empty columns on the left
+Ordering (order-*):
+     order-* changes the visual order of columns without changing HTML.
+     order-md-2 → on medium screens and up, this column appears second.
+Gutters (g-*)  
+     g-4 → adds spacing (gutter) between columns both horizontally and vertically.
+NAVBAR
+    brand → the logo or name of the site, usually on the left.
+    collapse menu:This is the 3-line button (☰) on mobile in small screens  
+BOOTSTRAP CSS COMPONENTS
+     Buttons
+    Cards:A box to display content neatly
+     Alerts
+     Badges: small count or label Show levels (Beginner, Intermediate, Advanced)
+    Progress bars: visually represent skill levels
+    List groups
+   Tables (responsive)
+   Images (rounded/thumbnail)
+BOOTSTRAP JAVASCRIPT COMPONENTS
+   Modal:A popup box that appears on screen.
+   Carousel:A slideshow of images
+   Collapse:Show/hide content when clicking a button
+   Dropdown
+   Tooltip:Small text appears when you hover
+   Popover:Like tooltip but bigger box with more content
+
+
+    -->
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+    <a class="navbar-brand">MyResume</a>
+    
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div id="nav" class="collapse navbar-collapse">
+    <ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    
+    <!-- ===== HOME ===== -->
+    <section id="home" class="bg-primary text-white text-center p-5">
+    <h1>VANTAKU VARSHITHA</h1>
+    <p class="d-none d-md-block">Full Stack Developer</p>
+    
+    <button class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#resumeModal">
+    View Resume
+    </button>
+    </section>
+    
+    <!-- ===== MODAL ===== -->
+    <div class="modal fade" id="resumeModal">
+    <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5>Resume</h5>
+    <button class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body p-2">My resume details here.</div>
+    </div>
+    </div>
+    </div>
+    
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="container my-3">
+    <div class="row">
+    <div class="col-md-4 text-center">
+    <img src="images/profile.jpg" class="img-fluid rounded-circle img-thumbnail w-50">
+    </div>
+    <div class="col-md-8">
+        <h2 class="mb-2">About Me</h2>
+        <p class="small mb-2">I am a web developer.</p>
+    
+    <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#more">
+    Show More
+    </button>
+    
+    <div id="more" class="collapse mt-2">
+    Extra details about me.
+    </div>
+    
+    </div>
+    </div>
+    </section>
+    
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="bg-light py-5">
+    <div class="container">
+    <h2 class="text-center">Skills</h2>
+    
+    <p>HTML <span class="badge bg-success">Advanced</span></p>
+    <div class="progress mb-3">
+    <div class="progress-bar bg-success" style="width:90%">90%</div>
+    </div>
+    
+    <p>CSS <span class="badge bg-warning">Intermediate</span></p>
+    <div class="progress mb-3">
+    <div class="progress-bar bg-info" style="width:75%">75%</div>
+    </div>
+    
+    <p>JavaScript</p>
+    <div class="progress mb-3">
+    <div class="progress-bar bg-primary" style="width:80%">80%</div>
+    </div>
+    
+    <p>MongoDB</p>
+    <div class="progress">
+    <div class="progress-bar bg-dark" style="width:65%">65%</div>
+    </div>
+    
+    </div>
+    </section>
+    
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="container my-5">
+    <h2 class="text-center">Projects</h2>
+    
+    <div class="row g-4">
+    <div class="col-md-4">
+    <div class="card">
+    <img src="images/project1.jpg" class="card-img-top">
+    <div class="card-body">
+    <h5>Project <span class="badge bg-primary">New</span></h5>
+    <p>Bootstrap project</p>
+    
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">
+    View
+    </button>
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    <!-- PROJECT MODAL -->
+    <div class="modal fade" id="projectModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5>Project Details</h5>
+    <button class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body">Project info here</div>
+    </div>
+    </div>
+    </div>
+    
+    <!-- ===== EDUCATION ===== -->
+    <section class="container my-5">
+    <h2 class="text-center">Education</h2>
+    
+    <div class="table-responsive">
+    <table class="table table-bordered text-center">
+    <tr><th>Year</th><th>Course</th></tr>
+    <tr><td>2025</td><td>B.Tech</td></tr>
+    </table>
+    </div>
+    
+    <ul class="list-group mt-3">
+    <li class="list-group-item">Problem Solving</li>
+    <li class="list-group-item">Team Work</li>
+    <li class="list-group-item">Communication</li>
+    </ul>
+    
+    </section>
+    
+    <!-- ===== GALLERY (CAROUSEL) ===== -->
+    <section class="container my-5">
+    <h2 class="text-center">Gallery</h2>
+    
+    <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+    
+    <div class="carousel-item active">
+    <img src="images/project1.jpg" class="d-block w-100">
+    </div>
+    
+    <div class="carousel-item">
+    <img src="images/project2.jpg" class="d-block w-100">
+    </div>
+    
+    </div>
+    
+    <button class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    </button>
+    
+    <button class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    </button>
+    
+    </div>
+    </section>
+    
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="bg-primary text-white py-5">
+    <div class="container">
+    
+    <div class="alert alert-success text-center">Portfolio Ready!</div>
+    
+    <form class="bg-white text-dark p-4 rounded">
+    
+    <input type="text" class="form-control mb-3" placeholder="Name">
+    <input type="email" class="form-control mb-3" placeholder="Email">
+    <input type="password" class="form-control mb-3" placeholder="Password">
+    
+    <textarea class="form-control mb-3" placeholder="Message"></textarea>
+    
+    <select class="form-select mb-3">
+    <option>Choose...</option>
+    <option>Job</option>
+    <option>Freelance</option>
+    </select>
+    
+    <div class="form-check">
+    <input class="form-check-input" type="radio" name="contact">
+    <label>Email</label>
+    </div>
+    
+    <div class="form-check">
+    <input class="form-check-input" type="checkbox">
+    <label>Accept Terms</label>
+    </div>
+    
+    <button class="btn btn-primary w-100 mt-3">Submit</button>
+    
+    </form>
+    
+    </div>
+    </section>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark text-white text-center p-3">
+    <p>© 2026 My Resume</p>
+    
+    <i class="bi bi-linkedin me-3"></i>
+    <i class="bi bi-github"></i>
+    
+    </footer>
+    
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

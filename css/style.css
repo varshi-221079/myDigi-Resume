@@ -1,0 +1,30 @@
+/* ===== style.css ===== */
+
+/* Body font and background */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa; /* light gray background */
+}
+
+/* Header styling */
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section headings */
+section h2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Cards hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Contact button styling */
+section .btn-light {
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+}
